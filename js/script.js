@@ -1,20 +1,28 @@
 $(document).ready(function(){
     $('.icon-menu').click(function(event){
-        $(this).toggleClass('active');
+    $(this).toggleClass('active');
+        $('body').toggleClass('lock');
         $('.menu__body').toggleClass('active');
         $('.header__logo').toggleClass('active');
-        $('body').toggleClass('lock');
+        $('.menu__link').addClass('burgered');
+
 });
     $('.menu__link').click(function(event){
-        $('.icon-menu').toggleClass('active');
-        $('.menu__body').toggleClass('active');
-        $('.header__logo').toggleClass('active');
-        $('body').hasClass('lock').removeClass('lock')
+        $('.icon-menu').removeClass('active');
+        $('.menu__body').removeClass('active');
+        $('.header__logo').removeClass('active');
+        $('body').removeClass('lock');
     })
-})
+});
 
-if (!$('menu__body').hasClass('active')){$('body').addClass('lock');}
-else {$('body').removeClass('lock');}
+if ($('.menu__body').hasClass('active')){
+    $('body').addClass('lock');
+}
+else {
+    $('body').removeClass('lock');
+}
+
+
 
 function ibg(){
     let ibg=document.querySelectorAll(".ibg");
