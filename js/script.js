@@ -9,10 +9,12 @@ $(document).ready(function(){
         $('.icon-menu').toggleClass('active');
         $('.menu__body').toggleClass('active');
         $('.header__logo').toggleClass('active');
-        $('body').toggleClass('lock');
+        $('body').hasClass('lock').removeClass('lock')
     })
-
 })
+
+if (!$('menu__body').hasClass('active')){$('body').addClass('lock');}
+else {$('body').removeClass('lock');}
 
 function ibg(){
     let ibg=document.querySelectorAll(".ibg");
