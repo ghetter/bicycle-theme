@@ -79,7 +79,7 @@ html {
 }
 
 body.lock {
-  overflow: hidden;
+  position: fixed;
 }
 
 .wrapper {
@@ -262,7 +262,7 @@ body.lock {
     top: 42px !important;
     background-color: #fff !important;
   }
-  .menu__link {
+  .menu__link.burgered {
     font-size: 20px;
   }
 }
@@ -365,7 +365,7 @@ body.lock {
 }
 
 .generation {
-  padding: 117px 0px 142px 0px;
+  padding: 117px 30px 142px 30px;
 }
 .generation__container {
   display: -ms-flex;
@@ -378,9 +378,18 @@ body.lock {
           flex-direction: column;
   padding: 0px 5px;
 }
+@media (max-width: 1280px) {
+  .generation {
+    padding: 100px 60px;
+  }
+  .generation .text, .generation .title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 @media (max-width: 767px) {
   .generation {
-    padding: 40px;
+    padding: 60px 50px;
   }
 }
 @media (max-width: 320px) {
